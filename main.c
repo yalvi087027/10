@@ -103,7 +103,7 @@ int main()
             char rrr1[2];
             rrr1[0]=hhh[i];
             rrr1[1]='\0';
-            if(hhh[i]!=rrr[0])
+            if(hhh[i]!=rrr[0] || i == aaaa-1)
             {
                 strcat(strokaaaa2, rrr1);
             }
