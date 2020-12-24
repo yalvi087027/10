@@ -47,6 +47,17 @@ int main()
             s3 = strstr(stroka," .");
         }
     }
+    if(stroka[0]==' ')
+    {
+        char ssssss[100];
+        strcpy(ssssss,stroka);
+        strcpy(stroka,ssssss+1);
+    }
+    int sjfvbdfvb = strlen(stroka);
+    if(stroka[sjfvbdfvb-1]==' ')
+    {
+        stroka[sjfvbdfvb-1]='\0';
+    }
     fprintf(f2,"\nstroka bez probelov:\n%s", stroka);
 
 
@@ -55,7 +66,8 @@ int main()
     int r1 = strlen(stroka) - 1;
     while (s == '.')
     {
-        s = stroka[--r1];
+        r1-=1;
+        s = stroka[r1];
     }
     int l1 = r1;
     while (s != ' ')
@@ -71,6 +83,7 @@ int main()
         slovo[i - l1] = stroka[i];
     }
     slovo[j] = '\0';
+    printf("\nslovo:%s\n", slovo);
 
     char* strokaaaa = malloc(100*sizeof(char));
     strokaaaa[0]='\0';
